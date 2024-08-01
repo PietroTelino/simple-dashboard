@@ -1,0 +1,3 @@
+Instrução de como executar o código:
+
+Basta executar o arquivo index.html com dois cliques.

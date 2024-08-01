@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="common/css/style.css">
 
     <!--Ícone superior da página-->
-    <link rel="icon" type="image/x-icon" href="common/img/ico/agro_bold.ico" />
+    <link rel="icon" type="image/x-icon" href="common/img/ico/icon.ico" />
 </head>
 <body>
     <div class="container mt-5" onclick="desabilitarEdicao()">
@@ -35,7 +35,7 @@
         </div>
         <div class="row">
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <table id="agro_bold_data_table" class="table table-striped table-bordered" style="width:100%">
+                <table id="bootstrap_data_table" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -327,7 +327,7 @@
         }
 
         $(document).ready(function() {
-            var table = $('#agro_bold_data_table').DataTable({
+            var table = $('#bootstrap_data_table').DataTable({
                 "paging": true,
                 "searching": true,
                 "ordering": true,
@@ -376,7 +376,7 @@
 
             // Função para atualizar uma linha na tabela
             function updateRow(cliente) {
-                var $row = $(`#agro_bold_data_table button[data-id='${cliente.id}']`).closest('tr');
+                var $row = $(`#bootstrap_data_table button[data-id='${cliente.id}']`).closest('tr');
                 var rowIdx = table.row($row).index();
                 console.log(rowIdx);
 
@@ -649,7 +649,7 @@
             }
 
             // Evento de clique no botão de visualizar cliente
-            $('#agro_bold_data_table').on('click', '.visualizar', function() {
+            $('#bootstrap_data_table').on('click', '.visualizar', function() {
                 // Recupera o id passado em data para passar pra função
                 var id = $(this).data('id');
 
@@ -659,7 +659,7 @@
             });
 
             // Evento de clique no botão de remover cliente
-            $('#agro_bold_data_table').on('click', '.remover', function() {
+            $('#bootstrap_data_table').on('click', '.remover', function() {
                 // Recupera o id passado em data para passar pra função
                 var id = $(this).data('id');
 
